@@ -1,0 +1,24 @@
+<br>
+<br>
+<br>
+<div class="card text-white bg-secondary mb-3" style="max-width: 46rem;">
+  <div class="card-body">
+    <h5 class="card-title,text-center">Lista de Alumnos</h5>
+    <table class="table table-sm table-hover">
+      <tbody>
+        <tr *ngFor="let product of productList">
+          <td>{{product.Nombre}}</td>
+          <td>{{product.Apellido}}</td>
+          <td>{{product.NControl}}</td>
+          <td>{{product.Clave_Materia}}</td>
+          <td>{{product.Calificacion}}</td>
+          <td>
+            <a class="btn btn-danger text-white" (click)="onDelete(product.$key)">
+                <i class="fas fa-trash-alt"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

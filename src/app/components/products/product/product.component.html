@@ -1,0 +1,79 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="card text-white bg-info mb-3" style="max-width: 22rem;">
+  <div class="card-body">
+    <h5 class="card-title, text-center">Registro</h5>
+      <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+          <!-- TO UPDATE -->
+          <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="productService.selectedProduct.$key">
+
+          <div class="form-group">
+            <input 
+              type="text"
+              class="form-control"
+              name="Nombre"
+              #name="ngModel"
+              [(ngModel)]="productService.selectedProduct.Nombre"
+              placeholder="Ingrese el Nombre"
+              >
+          </div>
+          <div class="form-group">
+              <input 
+                type="text"
+                class="form-control"
+                name="Apellido"
+                #category="ngModel"
+                [(ngModel)]="productService.selectedProduct.Apellido"
+                placeholder="Ingrese el Apellido"
+                >
+            </div>
+          <div class="form-group">
+            <input 
+              type="text"
+              class="form-control"
+              name="NControl"
+              #location="ngModel"
+              [(ngModel)]="productService.selectedProduct.NControl"
+              placeholder="Ingrese el NControl"
+              >
+            
+
+          </div>
+          <div class="form-group">
+            <input 
+              type="text"
+              class="form-control"
+              name="Clave_Materia"
+              #location="ngModel"
+              [(ngModel)]="productService.selectedProduct.Clave_Materia"
+              placeholder="Ingrese la Clave de la Materia"
+              >
+            
+
+          </div>
+          <div class="form-group">
+            <input 
+              type="text"
+              class="form-control"
+              name="Calificacion"
+              #location="ngModel"
+              [(ngModel)]="productService.selectedProduct.Calificacion"
+              placeholder="Ingrese la Calificacion"
+              >
+            
+
+          </div>
+          <div class="form-group">
+            <button class="btn btn-success" type="submit">
+                <i class="fas fa-plus-circle"></i> Añadir Alumno
+            </button>
+            <button class="btn btn-warning" type="reset" (click)="resetForm(productForm)">
+                <i class="fas fa-sync-alt"></i> Reiniciar
+            </button>
+          </div>
+        </form>
+  </div>
+</div>
